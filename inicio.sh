@@ -1,4 +1,4 @@
-echo "Escriba nueva contraseña para el usuario root:
+echo "Escriba nueva contraseña para el usuario root:"
 sudo passwd
 sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 sudo service ssh reload
