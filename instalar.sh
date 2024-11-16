@@ -1,9 +1,3 @@
-#ejecturar:
-#git clone https://github.com/calegret1/odoo16ent.git
-#chmod -R 775 ./odoo16ent/
-#cd odoo16ent
-#./instalar.sh
-
 sed -i 's/#$nrconf{restart} = '"'"'i'"'"';/$nrconf{restart} = '"'"'a'"'"';/g' /etc/needrestart/needrestart.conf
 apt-get update
 apt-get upgrade -y
