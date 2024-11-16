@@ -7,6 +7,7 @@ wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtm
 dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
 apt --fix-broken install -y
 dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+rm wkhtmltox_0.12.6.1-2.jammy_amd64.deb
 git clone https://github.com/calegret1/odoo16ent.git
 cd ./odoo16ent/install/
 cat odoo16ent.* > odoo16ent.deb
