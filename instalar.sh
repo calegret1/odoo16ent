@@ -22,6 +22,9 @@ apt-get install -f -y
 dpkg -i odoo16ent.deb
 apt-get update
 apt-get upgrade -y
+mkdir /usr/lib/python3/dist-packages/odoo/custom_addons
+mv custom_addons/* /usr/lib/python3/dist-packages/odoo/custom_addons
+echo "addons_path = /usr/lib/python3/dist-packages/odoo/addons, /usr/lib/python3/dist-packages/odoo/custom_addons" >> /etc/odoo/odoo.conf
 service odoo restart
 
 sed -i 's/$nrconf{restart} = '"'"'a'"'"';/#$nrconf{restart} = '"'"'i'"'"';/g' /etc/needrestart/needrestart.conf
