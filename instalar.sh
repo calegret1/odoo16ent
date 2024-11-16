@@ -13,6 +13,6 @@ cd ./odoo16ent/install/
 cat odoo16ent.* > odoo16ent.deb
 rm odoo16ent.aa odoo16ent.ab odoo16ent.ac
 dpkg -i odoo16ent.deb
-dpkg -i odoo16ent.deb apt-get install -f -y
-dpkg -i odoo16ent.deb dpkg -i odoo16ent.deb
+apt-get install -f -y
+dpkg -i odoo16ent.deb dpkg
 sed -i 's/$nrconf{restart} = '"'"'a'"'"';/#$nrconf{restart} = '"'"'i'"'"';/g' /etc/needrestart/needrestart.conf
