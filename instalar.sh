@@ -26,5 +26,6 @@ mkdir /usr/lib/python3/dist-packages/odoo/custom_addons
 mv custom_addons/* /usr/lib/python3/dist-packages/odoo/custom_addons
 echo "addons_path = /usr/lib/python3/dist-packages/odoo/addons, /usr/lib/python3/dist-packages/odoo/custom_addons" >> /etc/odoo/odoo.conf
 service odoo restart
-
+cd ..
+rm -r odoo16ent
 sed -i 's/$nrconf{restart} = '"'"'a'"'"';/#$nrconf{restart} = '"'"'i'"'"';/g' /etc/needrestart/needrestart.conf
