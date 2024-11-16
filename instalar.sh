@@ -1,3 +1,8 @@
+#ejecturar:
+#git clone https://github.com/calegret1/odoo16ent.git
+#cd /odoo16ent
+#./instalar.sh
+
 apt-get update
 apt-get upgrade
 sudo apt install postgresql -y
