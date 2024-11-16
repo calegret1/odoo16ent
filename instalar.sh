@@ -7,4 +7,4 @@ cat odoo16ent.* > odoo16ent.deb
 rm odoo16ent.aa odoo16ent.ab odoo16ent.ac
 dpkg -i odoo16ent.deb
 apt-get install -f -y
-
+dpkg -i odoo16ent.deb
