@@ -1,15 +1,16 @@
 #ejecturar:
 #git clone https://github.com/calegret1/odoo16ent.git
-#cd /odoo16ent
+#chmod -R 775 ./odoo16ent/
+#cd odoo16ent
 #./instalar.sh
 
 apt-get update
-apt-get upgrade
+apt-get upgrade -y
 sudo apt install postgresql -y
 git clone https://github.com/calegret1/odoo16ent.git
 cd ./odoo16ent/install/
 cat odoo16ent.* > odoo16ent.deb
 rm odoo16ent.aa odoo16ent.ab odoo16ent.ac
-dpkg -i odoo16ent.deb
+dpkg -i odoo16ent.deb -y
 apt-get install -f -y
-dpkg -i odoo16ent.deb
+dpkg -i odoo16ent.deb -y
