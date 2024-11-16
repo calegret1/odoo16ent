@@ -23,4 +23,14 @@ echo "addons_path = /usr/lib/python3/dist-packages/odoo/addons, /usr/lib/python3
 service odoo restart
 cd ~/..
 rm -r ~/odoo16ent
+pip install astor
+pip install unidecode
+pip install schwifty==2024.4.0
+pip install babel
+pip install decorator
+pip install Werkzeug
+pip install Psycopg2
+pip install pypdf2
+pip install XlsxWriter
+pip install lxml
 sed -i 's/$nrconf{restart} = '"'"'a'"'"';/#$nrconf{restart} = '"'"'i'"'"';/g' /etc/needrestart/needrestart.conf
