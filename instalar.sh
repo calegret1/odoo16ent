@@ -33,4 +33,11 @@ pip install Psycopg2
 pip install pypdf2
 pip install XlsxWriter
 pip install lxml
+pip3 install pdfminer.six
+pip uninstall pyopenssl
+pip install pyopenssl==22.0.0
+pip uninstall cryptography
+pip install cryptography==37.0.0
+
+
 sed -i 's/$nrconf{restart} = '"'"'a'"'"';/#$nrconf{restart} = '"'"'i'"'"';/g' /etc/needrestart/needrestart.conf
