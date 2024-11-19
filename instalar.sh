@@ -20,7 +20,7 @@ apt-get upgrade -y
 mkdir /usr/lib/python3/dist-packages/odoo/custom_addons
 mv ~/odoo16ent/custom_addons/* /usr/lib/python3/dist-packages/odoo/custom_addons
 echo "addons_path = /usr/lib/python3/dist-packages/odoo/addons, /usr/lib/python3/dist-packages/odoo/custom_addons" >> /etc/odoo/odoo.conf
-service odoo restart
+
 cd ~/..
 rm -r ~/odoo16ent
 pip install astor
@@ -39,5 +39,6 @@ pip install pyopenssl==22.0.0
 pip uninstall cryptography
 pip install cryptography==37.0.0
 
+service odoo restart
 
 sed -i 's/$nrconf{restart} = '"'"'a'"'"';/#$nrconf{restart} = '"'"'i'"'"';/g' /etc/needrestart/needrestart.conf
